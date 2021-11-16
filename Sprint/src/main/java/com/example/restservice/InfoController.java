@@ -15,8 +15,8 @@ public class InfoController {
     private final AtomicLong counter = new AtomicLong();
 
     @GetMapping("/info")
-    public Info greeting(@RequestParam(value = "Name", defaultValue = "World") String name) {
-        return new Info();//(counter.incrementAndGet(), String.format(template, name));
+    public Info greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
+        return new Info(counter.incrementAndGet(), String.format(template, name));
     }
 
 }
