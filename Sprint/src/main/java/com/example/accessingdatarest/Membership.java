@@ -15,7 +15,7 @@ public class Membership {
     private String LastName;
     private String Address;
     private String Email;
-    private int PhoneNumber;
+    private int PhoneNum;
     private LocalDate StartDate;
     private LocalDate Duration;
     private String Membership;
@@ -56,11 +56,11 @@ public class Membership {
     }
 
     public int getPhoneNumber() {
-        return PhoneNumber;
+        return PhoneNum;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
-        PhoneNumber = phoneNumber;
+    public void setPhoneNumber(int phoneNum) {
+        PhoneNum = phoneNum;
     }
 
     public LocalDate getStartDate() {
