@@ -14,8 +14,8 @@ public class Tournament {
     private LocalDate Start;
     private LocalDate End;
     private String Location;
-    private int Fee;
-    private int Prize;
+    private double Fee;
+    private double Prize;
     private String Members;
     private String Standings;
 
@@ -43,19 +43,19 @@ public class Tournament {
         Location = location;
     }
 
-    public int getFee() {
+    public double getFee() {
         return Fee;
     }
 
-    public void setFee(int fee) {
+    public void setFee(double fee) {
         Fee = fee;
     }
 
-    public int getPrize() {
+    public double getPrize() {
         return Prize;
     }
 
-    public void setPrize(int prize) {
+    public void setPrize(double prize) {
         Prize = prize;
     }
 
