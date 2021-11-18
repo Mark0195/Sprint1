@@ -10,16 +10,16 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 @RepositoryRestResource(collectionResourceRel = "Membership", path = "Membership")
 
 public interface MembershipRepo extends PagingAndSortingRepository<Membership, Long> {
-    List<Membership> findByMembershipFirstName(@Param("FirstName") String FirstName);
-    List<Membership> findByMembershipLastName(@Param("LastName") String LastName);
-    List<Membership> findByMembershipAddress(@Param("Address") String Address);
-    List<Membership> findByMembershipEmail(@Param("Email") String Email);
-    List<Membership> findByMembershipPhoneNum(@Param("PhoneNum") int PhoneNum);
-    List<Membership> findByMembershipStartDate(@Param("StartDate") LocalDate StartDate);
-    List<Membership> findByMembershipDuration(@Param("Duration") LocalDate Duration);
-    List<Membership> findByMembership(@Param("Membership") String Membership);
-    List<Membership> findByMembershipCurrentTournaments(@Param("CurrentTournaments") String CurrentTournaments);
-    List<Membership> findByMembershipPastTournaments(@Param("PastTournaments") String PastTournaments);
-    List<Membership> findByMembershipUpcomingTournaments(@Param("UpcomingTournaments") String UpcomingTournaments);
+    List<Membership> findByFirstName(@Param("FirstName") String FirstName);
+    List<Membership> findByLastName(@Param("LastName") String LastName);
+    List<Membership> findByAddress(@Param("Address") String Address);
+    List<Membership> findByEmail(@Param("Email") String Email);
+    List<Membership> findByPhoneNum(@Param("PhoneNum") int PhoneNum);
+    List<Membership> findByStartDate(@Param("StartDate") LocalDate StartDate);
+    List<Membership> findByDuration(@Param("Duration") LocalDate Duration);
+    List<Membership> findByMembershipType(@Param("MembershipType") String MembershipType);
+    List<Membership> findByCurrentTournaments(@Param("CurrentTournaments") String CurrentTournaments);
+    List<Membership> findByPastTournaments(@Param("PastTournaments") String PastTournaments);
+    List<Membership> findByUpcomingTournaments(@Param("UpcomingTournaments") String UpcomingTournaments);
 
 }

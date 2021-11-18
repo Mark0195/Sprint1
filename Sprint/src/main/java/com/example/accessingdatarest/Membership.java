@@ -18,13 +18,13 @@ public class Membership {
     private int PhoneNum;
     private LocalDate StartDate;
     private LocalDate Duration;
-    private String Membership;
+    private String MembershipType;
     private String CurrentTournaments;
     private String PastTournaments;
     private String UpcomingTournaments;
 
     public Membership(String FirstName, String LastName, String Address, String Email, int PhoneNum, LocalDate StartDate,
-                      LocalDate Duration, String Membership, String PastTournaments,
+                      LocalDate Duration, String MembershipType, String PastTournaments,
                       String CurrentTournaments, String UpcomingTournaments) {
         this.FirstName = FirstName;
         this.LastName = LastName;
@@ -33,7 +33,7 @@ public class Membership {
         this.PhoneNum = PhoneNum;
         this.StartDate = StartDate;
         this.Duration = Duration;
-        this.Membership = Membership;
+        this.MembershipType = MembershipType;
         this.PastTournaments = PastTournaments;
         this.CurrentTournaments = CurrentTournaments;
         this.UpcomingTournaments = UpcomingTournaments;
@@ -107,12 +107,12 @@ public class Membership {
         Duration = duration;
     }
 
-    public String getMembership() {
-        return Membership;
+    public String getMembershipType() {
+        return MembershipType;
     }
 
-    public void setMembership(String membership) {
-        Membership = membership;
+    public void setMembershipType(String membershipType) {
+        MembershipType = membershipType;
     }
 
     public String getCurrentTournaments() {
@@ -135,7 +135,7 @@ public class Membership {
         return UpcomingTournaments;
     }
 
-    public void setUpcomingTournaments(String upcomingtournaments) {
-        UpcomingTournaments = upcomingtournaments;
+    public void setUpcomingTournaments(String upcomingTournaments) {
+        UpcomingTournaments = upcomingTournaments;
     }
 }
