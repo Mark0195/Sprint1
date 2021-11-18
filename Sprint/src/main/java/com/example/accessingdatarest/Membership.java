@@ -10,6 +10,7 @@ import java.time.LocalDate;
 public class Membership {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
     private String FirstName;
     private String LastName;
     private String Address;
@@ -21,6 +22,34 @@ public class Membership {
     private String CurrentTournaments;
     private String PastTournaments;
     private String UpcomingTournaments;
+
+    public Membership(String FirstName, String LastName, String Address, String Email, int PhoneNum, LocalDate StartDate,
+                      LocalDate Duration, String Membership, String PastTournaments,
+                      String CurrentTournaments, String UpcomingTournaments) {
+        this.FirstName = FirstName;
+        this.LastName = LastName;
+        this.Address = Address;
+        this.Email = Email;
+        this.PhoneNum = PhoneNum;
+        this.StartDate = StartDate;
+        this.Duration = Duration;
+        this.Membership = Membership;
+        this.PastTournaments = PastTournaments;
+        this.CurrentTournaments = CurrentTournaments;
+        this.UpcomingTournaments = UpcomingTournaments;
+    }
+
+    public Membership() {
+
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getFirstName() {
         return FirstName;

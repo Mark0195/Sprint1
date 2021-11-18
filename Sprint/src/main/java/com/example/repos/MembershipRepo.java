@@ -11,7 +11,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 public interface MembershipRepo extends PagingAndSortingRepository<Membership, Long> {
     List<Membership> findByMembershipFirstName(@Param("FirstName") String FirstName);
-    List<Membership> findByMembershipLastName(@Param("Lastname") String Lastname);
+    List<Membership> findByMembershipLastName(@Param("LastName") String LastName);
     List<Membership> findByMembershipAddress(@Param("Address") String Address);
     List<Membership> findByMembershipEmail(@Param("Email") String Email);
     List<Membership> findByMembershipPhoneNum(@Param("PhoneNum") int PhoneNum);
