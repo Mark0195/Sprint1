@@ -20,11 +20,23 @@ public class PersonController {
     PersonRepo personRepo;
 
     @GetMapping("/People")
-    public ResponseEntity<List<Person>> getAllByName(@RequestParam(required = false) String name) {
+    public ResponseEntity<List<Person>> getAllByFirstName(@RequestParam(required = false) String name) {
         try{
             List<Person> person = new ArrayList<Person>();
             if(name == null)
-                personRepo.findByName(name).forEach(person::add);
+                personRepo.findByFirstName(name).forEach(person::add);
+            return new ResponseEntity<>(person, HttpStatus.OK);
+        }catch(Exception e){
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @GetMapping("/People")
+    public ResponseEntity<List<Person>> getAllByLastName(@RequestParam(required = false) String name) {
+        try{
+            List<Person> person = new ArrayList<Person>();
+            if(name == null)
+                personRepo.findByLastName(name).forEach(person::add);
             return new ResponseEntity<>(person, HttpStatus.OK);
         }catch(Exception e){
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -56,7 +68,7 @@ public class PersonController {
     }
 
     @GetMapping("/People")
-    public ResponseEntity<List<Person>> getAllMembershipsByPhoneNumber(@RequestParam(required = false) int phoneNumber) {
+    public ResponseEntity<List<Person>> getAllByPhoneNumber(@RequestParam(required = false) int phoneNumber) {
         try{
             List<Person> person = new ArrayList<Person>();
             if(phoneNumber == 0)
