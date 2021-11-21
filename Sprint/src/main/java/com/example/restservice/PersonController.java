@@ -68,11 +68,11 @@ public class PersonController {
     }
 
     @GetMapping("/People")
-    public ResponseEntity<List<Person>> getAllByPhoneNumber(@RequestParam(required = false) int phoneNumber) {
+    public ResponseEntity<List<Person>> getAllByPhoneNum(@RequestParam(required = false) int phoneNum) {
         try{
             List<Person> person = new ArrayList<Person>();
-            if(phoneNumber == 0)
-                PersonRepo.findByPhoneNumber(PhoneNum).forEach(person::add);
+            if(phoneNum == 0)
+                personRepo.findByPhoneNum(phoneNum).forEach(person::add);
             return new ResponseEntity<>(person, HttpStatus.OK);
         }catch(Exception e){
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);

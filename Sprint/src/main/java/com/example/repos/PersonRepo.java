@@ -12,7 +12,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 public interface PersonRepo extends PagingAndSortingRepository<Person, Long> {
     List<Person> findByFirstName(@Param("FirstName") String FirstName);
     List<Person> findByLastName(@Param("LastName") String LastName);
-    List<Person> findByAddress(@Param("address") String address);
-    List<Person> findByEmail(@Param("email") String email);
-    List<Person> findByPhoneNumber(@Param("phoneNumber") int phoneNumber);
+    List<Person> findByAddress(@Param("Address") String Address);
+    List<Person> findByEmail(@Param("Email") String Email);
+    List<Person> findByPhoneNum(@Param("PhoneNum") int PhoneNum);
 }

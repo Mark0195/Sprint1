@@ -19,7 +19,7 @@ public class MembershipController {
 
 
     @GetMapping("/Membership")
-    public ResponseEntity<List<Membership>> getAllMembershipsByStartDate(@RequestParam(required = false) LocalDate StartDate) {
+    public ResponseEntity<List<Membership>> getAllByStartDate(@RequestParam(required = false) LocalDate StartDate) {
         try{
             List<Membership> membership = new ArrayList<Membership>();
             if(StartDate == null)
@@ -31,7 +31,7 @@ public class MembershipController {
     }
 
     @GetMapping("/Membership")
-    public ResponseEntity<List<Membership>> getAllMembershipsByDuration(@RequestParam(required = false) LocalDate Duration) {
+    public ResponseEntity<List<Membership>> getAllByDuration(@RequestParam(required = false) LocalDate Duration) {
         try{
             List<Membership> membership = new ArrayList<Membership>();
             if(Duration == null)
@@ -55,7 +55,7 @@ public class MembershipController {
     }
 
     @GetMapping("/Membership")
-    public ResponseEntity<List<Membership>> getAllMembershipsByTournaments(@RequestParam(required = false) String CurrentTournaments, String PastTournaments) {
+    public ResponseEntity<List<Membership>> getAllByTournaments(@RequestParam(required = false) String CurrentTournaments, String PastTournaments) {
         try{
             List<Membership> membership = new ArrayList<Membership>();
             if(CurrentTournaments == null & PastTournaments == null)
@@ -71,7 +71,7 @@ public class MembershipController {
     }
 
     @GetMapping("/Membership")
-    public ResponseEntity<List<Membership>> getAllMembershipsByUpcomingTournaments(@RequestParam(required = false) String UpcomingTournaments) {
+    public ResponseEntity<List<Membership>> getAllByUpcomingTournaments(@RequestParam(required = false) String UpcomingTournaments) {
         try{
             List<Membership> membership = new ArrayList<Membership>();
             if(UpcomingTournaments == null)
