@@ -17,62 +17,6 @@ public class MembershipController {
     @Autowired
     private MembershipRepo membershipRepo;
 
-    @GetMapping("/Membership")
-    public ResponseEntity<List<Membership>> getAllMembershipsByName(@RequestParam(required = false) String FirstName, String LastName) {
-        try {
-            List<Membership> membership = new ArrayList<Membership>();
-            if (LastName == null && FirstName == null)
-                membershipRepo.findAll().forEach(membership::add);
-            else if (LastName == null)
-                membershipRepo.findByFirstName(FirstName).forEach(membership::add);
-            else
-                membershipRepo.findByLastName(LastName).forEach(membership::add);
-
-            if (membership.isEmpty()) {
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-            }
-
-            return new ResponseEntity<>(membership, HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-
-    @GetMapping("/Membership")
-    public ResponseEntity<List<Membership>> getAllMembershipsByAddress(@RequestParam(required = false) String Address) {
-        try{
-            List<Membership> membership = new ArrayList<Membership>();
-            if(Address == null)
-                membershipRepo.findByAddress(Address).forEach(membership::add);
-            return new ResponseEntity<>(membership, HttpStatus.OK);
-        }catch(Exception e){
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-
-    @GetMapping("/Membership")
-    public ResponseEntity<List<Membership>> getAllMembershipsByEmail(@RequestParam(required = false) String Email) {
-        try{
-            List<Membership> membership = new ArrayList<Membership>();
-            if(Email == null)
-                membershipRepo.findByEmail(Email).forEach(membership::add);
-            return new ResponseEntity<>(membership, HttpStatus.OK);
-        }catch(Exception e){
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-
-    @GetMapping("/Membership")
-    public ResponseEntity<List<Membership>> getAllMembershipsByPhoneNumber(@RequestParam(required = false) int PhoneNumber) {
-        try{
-            List<Membership> membership = new ArrayList<Membership>();
-            if(PhoneNumber == 0)
-                membershipRepo.findByPhoneNum(PhoneNumber).forEach(membership::add);
-            return new ResponseEntity<>(membership, HttpStatus.OK);
-        }catch(Exception e){
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
 
     @GetMapping("/Membership")
     public ResponseEntity<List<Membership>> getAllMembershipsByStartDate(@RequestParam(required = false) LocalDate StartDate) {
@@ -142,8 +86,7 @@ public class MembershipController {
     public ResponseEntity<Membership> postMembership(@RequestBody Membership membership) {
         try {
             Membership membership1 = (Membership) membershipRepo
-                    .save(new Membership(membership.getFirstName(),membership.getLastName(), membership.getAddress(), membership.getEmail(), membership.getPhoneNumber(),
-                            membership.getStartDate(), membership.getDuration(), membership.getMembershipType(), membership.getPastTournaments(),
+                    .save(new Membership (membership.getStartDate(), membership.getDuration(), membership.getMembershipType(), membership.getPastTournaments(),
                             membership.getCurrentTournaments(), membership.getUpcomingTournaments()));
             return new ResponseEntity<>(membership1, HttpStatus.CREATED);
         } catch (Exception e) {
@@ -156,11 +99,6 @@ public class MembershipController {
         Optional<Membership> membershipInfo = membershipRepo.findById(id);
         if (membershipInfo.isPresent()) {
             Membership membership1 = membershipInfo.get();
-            membership1.setFirstName(membership.getFirstName());
-            membership1.setLastName(membership.getLastName());
-            membership1.setAddress(membership.getAddress());
-            membership1.setEmail(membership.getEmail());
-            membership1.setPhoneNumber(membership.getPhoneNumber());
             membership1.setStartDate(membership.getStartDate());
             membership1.setDuration(membership.getDuration());
             membership1.setMembershipType(membership.getMembershipType());
