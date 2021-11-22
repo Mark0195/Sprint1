@@ -11,27 +11,23 @@ public class Membership {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private LocalDate StartDate;
-    private LocalDate Duration;
-    private String MembershipType;
-    private String CurrentTournaments;
-    private String PastTournaments;
-    private String UpcomingTournaments;
+    private LocalDate startDate;
+    private LocalDate duration;
+    private String membershipType;
+    private String currentTournaments;
+    private String pastTournaments;
+    private String upcomingTournaments;
 
-    public Membership(LocalDate StartDate, LocalDate Duration, String MembershipType, String PastTournaments,
-                      String CurrentTournaments, String UpcomingTournaments) {
-
-        this.StartDate = StartDate;
-        this.Duration = Duration;
-        this.MembershipType = MembershipType;
-        this.PastTournaments = PastTournaments;
-        this.CurrentTournaments = CurrentTournaments;
-        this.UpcomingTournaments = UpcomingTournaments;
-    }
-
-    public Membership() {
-
-    }
+//    public Membership(LocalDate StartDate, LocalDate Duration, String MembershipType, String PastTournaments,
+//                      String CurrentTournaments, String UpcomingTournaments) {
+//
+//        this.startDate = StartDate;
+//        this.duration = Duration;
+//        this.membershipType = MembershipType;
+//        this.pastTournaments = PastTournaments;
+//        this.currentTournaments = CurrentTournaments;
+//        this.upcomingTournaments = UpcomingTournaments;
+//    }
 
     public long getId() {
         return id;
@@ -41,52 +37,51 @@ public class Membership {
         this.id = id;
     }
 
-
     public LocalDate getStartDate() {
-        return StartDate;
+        return startDate;
     }
 
     public void setStartDate(LocalDate startDate) {
-        StartDate = startDate;
+        this.startDate = startDate;
     }
 
     public LocalDate getDuration() {
-        return Duration;
+        return duration;
     }
 
     public void setDuration(LocalDate duration) {
-        Duration = duration;
+        this.duration = duration;
     }
 
     public String getMembershipType() {
-        return MembershipType;
+        return membershipType;
     }
 
     public void setMembershipType(String membershipType) {
-        MembershipType = membershipType;
+        this.membershipType = membershipType;
     }
 
     public String getCurrentTournaments() {
-        return CurrentTournaments;
+        return currentTournaments;
     }
 
     public void setCurrentTournaments(String currentTournaments) {
-        CurrentTournaments = currentTournaments;
+        this.currentTournaments = currentTournaments;
     }
 
     public String getPastTournaments() {
-        return PastTournaments;
+        return pastTournaments;
     }
 
     public void setPastTournaments(String pastTournaments) {
-        PastTournaments = pastTournaments;
+        this.pastTournaments = pastTournaments;
     }
 
     public String getUpcomingTournaments() {
-        return UpcomingTournaments;
+        return upcomingTournaments;
     }
 
     public void setUpcomingTournaments(String upcomingTournaments) {
-        UpcomingTournaments = upcomingTournaments;
+        this.upcomingTournaments = upcomingTournaments;
     }
 }

@@ -1,29 +1,29 @@
 package com.example.accessingdatarest;
 
-
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private String FirstName;
-    private String LastName;
-    private String Address;
-    private String Email;
-    private int PhoneNum;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String email;
+    private int phoneNum;
 
-
-    public Person(String FirstName, String LastName, String Address, String Email, int PhoneNum){
-
-        this.FirstName = FirstName;
-        this.LastName = LastName;
-        this.Address = Address;
-        this.Email = Email;
-        this.PhoneNum = PhoneNum;
-    }
+//    public Person(String FirstName, String LastName, String Address, String Email, int PhoneNum){
+//
+//        this.firstName = FirstName;
+//        this.lastName = LastName;
+//        this.address = Address;
+//        this.email = Email;
+//        this.phoneNum = PhoneNum;
+//    }
 
     public long getId() {
         return id;
@@ -34,42 +34,42 @@ public class Person {
     }
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-        FirstName = firstName;
+        this.firstName = firstName;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        this.lastName = lastName;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public int getPhoneNumber() {
-        return PhoneNum;
+        return phoneNum;
     }
 
     public void setPhoneNumber(int phoneNum) {
-        PhoneNum = phoneNum;
+        this.phoneNum = phoneNum;
     }
 }

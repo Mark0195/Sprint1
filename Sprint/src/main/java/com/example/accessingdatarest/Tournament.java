@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.time.LocalDate;
 import java.time.LocalTime;
 
 
@@ -13,29 +12,24 @@ public class Tournament {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private LocalTime Start;
-    private LocalTime End;
-    private String Location;
-    private double Fee;
-    private double Prize;
-    private String Members;
-    private String Standings;
+    private LocalTime start;
+    private LocalTime end;
+    private String location;
+    private double fee;
+    private double prize;
+    private String members;
+    private String standings;
 
-    public Tournament(LocalTime Start, LocalTime End, String Location, double Fee, double Prize,
-                      String Members, String Standings){
-        this.Start = Start;
-        this.End = End;
-        this.Location = Location;
-        this.Fee = Fee;
-        this.Prize = Prize;
-        this.Members = Members;
-        this.Standings = Standings;
-    }
-
-    public Tournament() {
-
-    }
-
+//    public Tournament(LocalTime Start, LocalTime End, String Location, double Fee, double Prize,
+//                      String Members, String Standings){
+//        this.Start = Start;
+//        this.End = End;
+//        this.Location = Location;
+//        this.Fee = Fee;
+//        this.Prize = Prize;
+//        this.Members = Members;
+//        this.Standings = Standings;
+//    }
 
     public long getId() {
         return id;
@@ -46,58 +40,58 @@ public class Tournament {
     }
 
     public LocalTime getStart() {
-        return Start;
+        return start;
     }
 
     public void setStart(LocalTime start) {
-        Start = start;
+        this.start = start;
     }
 
     public LocalTime getEnd() {
-        return End;
+        return end;
     }
 
     public void setEnd(LocalTime end) {
-        End = end;
+        this.end = end;
     }
 
     public String getLocation() {
-        return Location;
+        return location;
     }
 
     public void setLocation(String location) {
-        Location = location;
+        this.location = location;
     }
 
     public double getFee() {
-        return Fee;
+        return fee;
     }
 
     public void setFee(double fee) {
-        Fee = fee;
+        this.fee = fee;
     }
 
     public double getPrize() {
-        return Prize;
+        return prize;
     }
 
     public void setPrize(double prize) {
-        Prize = prize;
+        this.prize = prize;
     }
 
     public String getMembers() {
-        return Members;
+        return members;
     }
 
     public void setMembers(String members) {
-        Members = members;
+        this.members = members;
     }
 
     public String getStandings() {
-        return Standings;
+        return standings;
     }
 
     public void setStandings(String standings) {
-        Standings = standings;
+        this.standings = standings;
     }
 }
