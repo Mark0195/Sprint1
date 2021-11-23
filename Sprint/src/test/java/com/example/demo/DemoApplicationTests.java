@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PersonTest {
     @Test
-    void testConstructor() {
+    void testConstructorPerson() {
         Person actualPerson = new Person();
         actualPerson.setAddress("12 Trails End");
         actualPerson.setEmail("jane.doe@example.org");
