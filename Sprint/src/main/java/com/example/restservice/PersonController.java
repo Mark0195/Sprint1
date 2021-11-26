@@ -19,7 +19,7 @@
 //    @Autowired
 //    PersonRepo personRepo;
 //
-//    @GetMapping("/People")
+//    @GetMapping("/Person")
 //    public ResponseEntity<List<Person>> getAllByFirstName(@RequestParam(required = false) String name) {
 //        try{
 //            List<Person> person = new ArrayList<Person>();
@@ -31,7 +31,7 @@
 //        }
 //    }
 //
-//    @GetMapping("/People")
+//    @GetMapping("/Person")
 //    public ResponseEntity<List<Person>> getAllByLastName(@RequestParam(required = false) String name) {
 //        try{
 //            List<Person> person = new ArrayList<Person>();
@@ -43,7 +43,7 @@
 //        }
 //    }
 //
-//    @GetMapping("/People")
+//    @GetMapping("/Person")
 //    public ResponseEntity<List<Person>> getAllByAddress(@RequestParam(required = false) String address) {
 //        try{
 //            List<Person> person = new ArrayList<Person>();
@@ -55,7 +55,7 @@
 //        }
 //    }
 //
-//    @GetMapping("/People")
+//    @GetMapping("/Person")
 //    public ResponseEntity<List<Person>> getAllByEmail(@RequestParam(required = false) String email) {
 //        try{
 //            List<Person> person = new ArrayList<Person>();
@@ -67,7 +67,7 @@
 //        }
 //    }
 //
-//    @GetMapping("/People")
+//    @GetMapping("/Person")
 //    public ResponseEntity<List<Person>> getAllByPhoneNum(@RequestParam(required = false) int phoneNum) {
 //        try{
 //            List<Person> person = new ArrayList<Person>();
@@ -79,7 +79,7 @@
 //        }
 //    }
 //
-//    @PostMapping("/People")
+//    @PostMapping("/Person")
 //    public ResponseEntity<Person> postPerson(@RequestBody Person person) {
 //        try {
 //            Person person1 = (Person) personRepo
@@ -89,7 +89,7 @@
 //            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 //        }
 //    }
-//    @PutMapping("/People/{id}")
+//    @PutMapping("/Person/{id}")
 //    public ResponseEntity<Person> updatedPerson(@PathVariable("id") long id, @RequestBody Person person ) {
 //        Optional<Person> personInfo = personRepo.findById(id);
 //        if (personInfo.isPresent()) {
@@ -105,7 +105,7 @@
 //        }
 //    }
 //
-//    @DeleteMapping("/People/{id}")
+//    @DeleteMapping("/Person/{id}")
 //    public ResponseEntity<Person> deletedPerson(@PathVariable("id") long id){
 //        try{
 //            personRepo.deleteById(id);

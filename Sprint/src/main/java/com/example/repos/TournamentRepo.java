@@ -1,5 +1,6 @@
 package com.example.repos;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 import com.example.accessingdatarest.Tournament;
@@ -9,8 +10,8 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource(collectionResourceRel = "tournament", path = "tournament")
 public interface TournamentRepo extends PagingAndSortingRepository<Tournament, Long> {
-    List<Tournament> findByStart(@Param("Start") LocalTime Start);
-    List<Tournament> findByEnd(@Param("End") LocalTime End);
+    List<Tournament> findByStart(@Param("Start") LocalDate Start);
+    List<Tournament> findByEnd(@Param("End") LocalDate End);
     List<Tournament> findByLocation(@Param("Location") String Location);
     List<Tournament> findByFee(@Param("Fee") double Fee);
     List<Tournament> findByPrize(@Param("Prize") double Prize);
