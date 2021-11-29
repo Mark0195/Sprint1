@@ -1,43 +1,41 @@
 package com.example.demo;
 
 
-import com.example.accessingdatarest.Membership;
-import com.example.accessingdatarest.Person;
-import com.example.accessingdatarest.Tournament;
-import org.junit.jupiter.api.Test;
-
-import java.time.LocalDate;
-import java.time.LocalTime;
-
-import static org.junit.jupiter.api.Assertions.*;
-
+//import com.example.accessingdatarest.*;
+//import org.junit.jupiter.api.Test;
+//
+//import java.time.LocalDate;
+//import java.time.LocalTime;
+//
+//import static org.junit.jupiter.api.Assertions.*;
+//
 //class PersonTest {
 //    @Test
 //    void testConstructorPerson() {
 //        Person actualPerson = new Person();
 //        actualPerson.setAddress("12 Trails End");
-//        actualPerson.setEmail("jane.doe@example.org");
-//        actualPerson.setFirstName("Jane");
-//        actualPerson.setId(645L);
-//        actualPerson.setLastName("Doe");
+//        actualPerson.setEmail("hammertime@askjeeves.com");
+//        actualPerson.setFirstName("MC");
+//        actualPerson.setId(3);
+//        actualPerson.setLastName("Hammer");
 //        actualPerson.setPhoneNumber(555-5555);
 //        assertEquals("12 Trails End", actualPerson.getAddress());
-//        assertEquals("jane.doe@example.org", actualPerson.getEmail());
-//        assertEquals("Jane", actualPerson.getFirstName());
-//        assertEquals(645L, actualPerson.getId());
-//        assertEquals("Doe", actualPerson.getLastName());
+//        assertEquals("hammertime@askjeeves.com", actualPerson.getEmail());
+//        assertEquals("MC", actualPerson.getFirstName());
+//        assertEquals(3, actualPerson.getId());
+//        assertEquals("Hammer", actualPerson.getLastName());
 //        assertEquals(555-5555, actualPerson.getPhoneNumber());
 //    }
 //
 //    @Test
 //    void testConstructorMembership() {
 //        Membership actualMembership = new Membership();
-//        actualMembership.setCurrentTournaments("Champion Of Golf");
+//        actualMembership.setCurrentTournament("Champion Of Golf");
 //        LocalDate ofEpochDayResult = LocalDate.ofEpochDay(1L);
 //        actualMembership.setDuration(ofEpochDayResult);
 //        actualMembership.setId(897L);
 //        actualMembership.setMembershipType("Trial");
-//        actualMembership.setPastTournaments("Lesser Champion Of Golf");
+//        actualMembership.setPastTournament("Lesser Champion Of Golf");
 //        LocalDate ofEpochDayResult1 = LocalDate.ofEpochDay(1L);
 //        actualMembership.setStartDate(ofEpochDayResult1);
 //        actualMembership.setUpcomingTournament("Super Duper Champion Of Golf");
@@ -90,7 +88,7 @@ import static org.junit.jupiter.api.Assertions.*;
 //        assertNotEquals(13.0, actualTournament.getFee());
 //        assertNotEquals(828L, actualTournament.getId());
 //        assertNotEquals("Corbin", actualTournament.getLocation());
-//        assertNotEquals("Steve, Bart, Peach", actualTournament.getMembers());
+//        assertNotEquals("Steve, Bart, Jim", actualTournament.getMembers());
 //        assertNotEquals(58.0, actualTournament.getPrize());
 //        assertNotEquals("Bob, John, Cliff", actualTournament.getStandings());
 //        assertSame(ofResult1, actualTournament.getStart());
